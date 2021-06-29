@@ -7,9 +7,11 @@ var engine, world;
 var bgImg
 var snow1
 var world
+var penguinImg, penguin
 
 function preload(){
 bgImg = loadImage("bg.png")
+  penguinImg = loadAnimation("penguin1.png","penguin2.png")
 }
 
 function setup() {
@@ -19,6 +21,11 @@ function setup() {
 
   snow1= new Snow(1050,200)
  snow1.scale = 0.9
+  
+  penguin = createSprite(900,700)
+ penguin.addAnimation("penguinWalk",penguinImg)
+ penguin.scale = 0.5
+ 
 
    
 }
