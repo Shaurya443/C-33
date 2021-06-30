@@ -34,5 +34,5 @@ background(bgImg)
 Engine.update(engine);
 
 snow1.display();
-
+ drawSprites();
 }
