@@ -24,7 +24,7 @@ function setup() {
   
   penguin = createSprite(900,700)
  penguin.addAnimation("penguinWalk",penguinImg)
- penguin.scale = 0.5
+ penguin.scale = 1.0
  
 
    
