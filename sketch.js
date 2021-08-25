@@ -13,21 +13,16 @@ var penguinImg, penguin
 function preload(){
 bgImg = loadImage("bg.png")
 penguinImg = loadAnimation("penguin1.png","penguin2.png")
+snow_Img = loadImage("snow1.png")
 }
 
 function setup() {
   createCanvas(900,700)
   engine = Engine.create();
   world = engine.world;
+spawnSnow()
 
-// Create snow
-if(frameCount % 60 ===0){
-  snow1= new Snow(200,50,50,50)
-  console.log(snow1.body.speed)
- snow1.scale = 0.1
- 
-}
- // create Sprite
+
  penguin = createSprite(200,600,50,50)
  penguin.addAnimation("penguinWalk",penguinImg)
  penguin.scale = 1.0
@@ -39,6 +34,19 @@ background(bgImg)
 Engine.update(engine);
 
 // snow display
-snow1.display();
- drawSprites();
+snow1.display()
+
+drawSprites();
+
 }
+
+function spawnSnow(){
+  if(frameCount % 60 === 0){
+    snow1 = new Snow(200,50,50,50)
+    snow1.addImage("snowFalling",snow_Img)
+    snow1.scale = 0.1;
+    snow1.velocityY = -3
+  }
+  
+}
+
