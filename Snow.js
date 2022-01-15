@@ -8,7 +8,7 @@ constructor(x,y,w,h)
      gravity:0.8,
      restitution:0.8
     }
-this.body=Bodies.rectangle(this.x, this.y,options)
+
 this.w = w
 this.h = h
 World.add(world,this.body)
