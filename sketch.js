@@ -24,11 +24,6 @@ function setup() {
   createCanvas(900,700)
   engine = Engine.create();
   world = engine.world;
-
-
-
- 
- 
    
 }
 function draw(){
