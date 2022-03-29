@@ -20,12 +20,11 @@ function setup() {
   penguin = createSprite(200,600,50,50)
  penguin.addAnimation("penguinWalk",penguinImg)
  penguin.scale = 1.0
- 
   createCanvas(900,700)
   engine = Engine.create();
   world = engine.world;
-   
-}
+} 
+
 function draw(){
 background(bgImg)
 Engine.update(engine);
@@ -37,11 +36,12 @@ snow.x = Math.round(random(900,0));
     snow.scale = 0.1;
   snow.velocityY = 3
     snow.lifetime=134
-  }
-
+  
+}
 
 
 drawSprites();
 
-}
 
+
+}
